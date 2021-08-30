@@ -2,6 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
+You can find the live demo at [https://priyalpatel27.github.io/QuizApp](https://priyalpatel27.github.io/QuizApp).
+
+# Screenshots
+
+## Quiz Criteria Selection
+![Quiz selection](screenshots/quiz_selection.png "Quiz selection")
+
+## Correct Answer
+![Correct answer](screenshots/correct_answer.png "Correct answer")
+
+## Incorrect Answer
+![Incorrect answer](screenshots/incorrect_answer.png "Incorrect answer")
+
+## Result Screen
+![Result Screen](screenshots/result_screen.png "Result screen")
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -25,3 +42,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Credits
+
+Quiz questions are provided by the [Open Triva Database](https://opentdb.com/) API.
