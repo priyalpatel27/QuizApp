@@ -1,0 +1,29 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.widget-style {
+    background: aliceblue;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.header-style {
+    color: #2E294E; 
+    font-family: cursive; 
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+label {
+    color: #2E294E;
+}
+
+.btn-outline-info {
+    color: #2E294E;
+    border-color: #2E294E;
+}

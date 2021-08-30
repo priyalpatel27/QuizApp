@@ -1,0 +1,18 @@
+<div class="flex-container">
+    <div *ngIf="questionApiResponse !== null" class="widget-style">
+        <h4 class="question-header">Question {{currentQuestionIndex+1}}:</h4>
+        <!-- <p>{{questionList[currentQuestionIndex].question.question}}</p> -->
+        <p [innerHTML]="questionList[currentQuestionIndex].question.question | safeHtml"></p>
+        <ul class="list-group">
+            <li #choice *ngFor="let answer of questionList[currentQuestionIndex].answers; let i = index" class="list-group-item list-group-item-action list-group-item-primary"
+                (click)="answerClicked(i)">
+                <!-- {{answer}} -->
+                <span [innerHTML]="answer | safeHtml"></span>
+                <bi *ngIf="correctAnswerIndex() !== i && answerAlreadySelected && selectedAnswerIndex === i" name="x-circle" class="incorrect-icon"></bi>
+                <bi *ngIf="correctAnswerIndex() === i && answerAlreadySelected" name="check-circle" class="correct-icon"></bi>
+            </li>
+        </ul>
+
+        <button type="button" class="btn btn-outline-info" (click)="nextClicked()" [disabled]="nextButtonDisabled">Next</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="flex-container">
+    <div *ngIf="resultReceived" class="widget-style">
+        <h1 class="header-style">Result!</h1>
+
+        <h2 class="header-style">Percentage: {{resultPercentage}} %</h2>
+        <h3 class="header-style">TotalQuestions: {{totalQuestion}}</h3>
+        <h3 class="header-style">CorrectAnswers: {{correctAnswers}}</h3>
+
+        <p class="header-style h1">Go to the <a routerLink="/quiz-selection" routerLinkActive="active">Quiz Selection</a> page to retake quiz.</p>
+    </div>
+    <div *ngIf="!resultReceived" class="widget-style">
+        <p class="header-style h1">Did not receive results. Go to the <a routerLink="/quiz-selection" routerLinkActive="active">Quiz Selection</a> page to get started.</p>
+    </div>
+</div>

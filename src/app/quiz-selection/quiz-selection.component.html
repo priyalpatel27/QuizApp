@@ -1,0 +1,28 @@
+<div class="flex-container">
+<div class="widget-style">
+    <h1 class="header-style">Select Quiz Criteria</h1>
+
+    <div class="form-group">
+        <label>Number of Questions:</label>
+        <input type="number" class="form-control" id="numberOfQuestions" (keyup)="numberOfQuestionsChange($event)"
+            min="1" max="20" [(ngModel)]="numberOfQuestions" required>
+    </div>
+
+    <div class="form-group">
+        <label>Difficulty:</label>
+        <select id="difficulty" class="form-control" (change)="difficultyChange($event)">
+            <option *ngFor="let difficulty of difficultyOption" value={{difficulty.id}}>{{difficulty.name}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Select Type:</label>
+        <select id="selectType" class="form-control" (change)="selectionChange($event)">
+            <option *ngFor="let type of selectionType" value={{type.id}}>{{type.name}}</option>
+        </select>
+    </div>
+
+    <button type="button" class="btn btn-outline-info" (click)="nextPageClick($event)">Next</button>
+</div>
+
+</div>
