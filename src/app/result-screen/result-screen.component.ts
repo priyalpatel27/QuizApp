@@ -20,6 +20,7 @@ export class ResultScreenComponent implements OnInit {
     this.correctAnswers = data?.correctAnswers;
 
     this.resultPercentage = (this.correctAnswers/this.totalQuestion) * 100;
+    this.resultPercentage = Math.floor(this.resultPercentage + 0.5); // round the percentage
 
     // if user refreshes this screen, the result screen cannot show any statistics because
     // the user has not taken a quiz in that session. so set resultReceived to true only
